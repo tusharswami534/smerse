@@ -16,12 +16,21 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (window.scrollY > 100) {
-      document.getElementById("navbar")?.classList.add("!bg-black");
-    } else {
-      document.getElementById("navbar")?.classList.remove("!bg-black");
-    }
-  });
+    const handleScroll = () => {
+      const navbar = document.getElementById("navbar");
+      if (navbar) {
+        if (window.scrollY > 100) {
+          navbar.classList.add("!bg-black");
+        } else {
+          navbar.classList.remove("!bg-black");
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
@@ -30,9 +39,9 @@ const Header = () => {
   return (
     <div
       id="navbar"
-      className="fixed top-0 left-0 z-50 bg-dark-blue/50 min-h-[100px] w-full px-4"
+      className="fixed top-0 left-0 z-50 bg-dark-blue/50 min-h-[100px] max-sm:min-h-[50px] w-full px-4"
     >
-      <div className="container pt-4 mx-auto w-full max-w-[1140px] items-center justify-between flex">
+      <div className="container pt-4 max-sm:pt-1 mx-auto w-full max-w-[1140px] items-center justify-between flex">
         <Link href={"#home"} className="text-white font-bold text-[20px]">
           {" "}
           <Image
@@ -40,6 +49,7 @@ const Header = () => {
             alt="logo"
             width={68}
             height={68}
+            className="max-sm:max-w-[40px]"
           />{" "}
         </Link>
         <div
@@ -76,20 +86,20 @@ const Header = () => {
           </button>
           <button
             onClick={handleOpen}
-            className="flex flex-col justify-between overflow-hidden w-[32px] h-10"
+            className="flex flex-col justify-between overflow-hidden w-[32px] h-10 max-sm:min-h-[20px] max-sm:h-[20px]"
           >
             <span
-              className={`max-w-[32px] w-full bg-white h-[5px] rounded-full flex transition-all duration-300 ${
+              className={`max-w-[32px] w-full bg-white max-sm:max-w-[14px] h-[5px] max-sm:min-h-[2px] max-sm:h-[2px] rounded-full flex transition-all duration-300 ${
                 open === true ? "translate-x-10" : ""
               }`}
             ></span>
             <span
-              className={`max-w-[32px] w-full bg-white h-[5px] rounded-full flex transition-all duration-300 relative after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-white after:transition-all after:duration-300 after:rounded-full ${
+              className={`max-w-[32px] w-full bg-white max-sm:max-w-[14px] h-[5px] max-sm:min-h-[2px] max-sm:h-[2px] rounded-full flex transition-all duration-300 relative after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-white after:transition-all after:duration-300 after:rounded-full ${
                 open === true ? " after:rotate-90 -rotate-45" : ""
               }`}
             ></span>
             <span
-              className={`max-w-[32px] w-full bg-white h-[5px] rounded-full flex transition-all duration-300 ${
+              className={`max-w-[32px] w-full bg-white max-sm:max-w-[14px] h-[5px] max-sm:min-h-[2px] max-sm:h-[2px] rounded-full flex transition-all duration-300 ${
                 open === true ? "-translate-x-10" : ""
               }`}
             ></span>
