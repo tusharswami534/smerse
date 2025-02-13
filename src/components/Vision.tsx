@@ -12,7 +12,7 @@ const Vision = () => {
           THE VISION
         </span>
       </div>
-      <div className="container pt-[138px] gap-5 gap-y-[68px] max-md:justify-center max-w-[1140px] max-lg:justify-start max-lg:flex-wrap flex">
+      <div className="container pt-[138px] gap-5 gap-y-[68px] max-md:justify-center max-w-[1150px] max-lg:justify-start max-lg:flex-wrap flex">
         {THE_VISION_LIST.map((item, i) => (
           <div
             key={i}
