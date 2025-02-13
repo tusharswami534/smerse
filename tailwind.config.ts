@@ -17,9 +17,11 @@ export default {
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(180deg, #952FFE 10.3%, #C641C6 44.39%, #FF676B 76.15%)',
-
       },
-      screens: {
+      backgroundSize: {
+        'custom-size' : '160% 100%',
+      },
+      screens: {  
         'md' : '769px',
         'lg' : '1025px'
       }

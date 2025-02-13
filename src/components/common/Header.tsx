@@ -74,33 +74,35 @@ const Header = () => {
           {/* <div className='bg-custom-gradient p-[2px_4px_5px] !backdrop-blur-[38px]'> */}
           <button
             onClick={handleClose}
-            className="bg-custom-gradient max-lg:hidden max-sm:block shadow-[0px_4px_4px_0px_#FF676B33_inset] py-[11px] px-6 font-extrabold text-xl text-white rounded-lg lg:ml-[39px]"
+            className="bg-custom-gradient hover:scale-110 transition-all duration-300 max-lg:hidden max-sm:block shadow-[0px_4px_4px_0px_#FF676B33_inset] py-[11px] px-6 font-extrabold text-xl text-white rounded-lg lg:ml-[39px]"
           >
             Mint Now
           </button>
           {/* </div> */}
         </div>
         <div className="lg:hidden gap-10 flex items-center">
-          <button className="bg-custom-gradient max-sm:hidden shadow-[0px_4px_4px_0px_#FF676B33_inset] py-[11px] px-6 font-extrabold text-xl text-white rounded-lg">
+          <button className="bg-custom-gradient hover:scale-110 transition-all duration-300 max-sm:hidden shadow-[0px_4px_4px_0px_#FF676B33_inset] py-[11px] px-6 font-extrabold text-xl text-white rounded-lg">
             Mint Now
           </button>
           <button
             onClick={handleOpen}
-            className="flex flex-col justify-between overflow-hidden w-[32px] h-10 max-sm:min-h-[20px] max-sm:h-[20px]"
+            className="flex flex-col gap-2 max-md:gap-1.5 max-sm:!gap-[2px] items-center justify-between relative z-20 overflow-hidden size-6.5 lg:hidden"
           >
             <span
-              className={`max-w-[32px] w-full bg-white max-sm:max-w-[14px] h-[5px] max-sm:min-h-[2px] max-sm:h-[2px] rounded-full flex transition-all duration-300 ${
-                open === true ? "translate-x-10" : ""
+              className={`w-10 max-lg:w-[39px] max-sm:w-[14px] h-[5px] max-lg:h-[3px] transition-all duration-300 bg-white rounded-lg ${
+                open ? "translate-x-10" : ""
               }`}
             ></span>
             <span
-              className={`max-w-[32px] w-full bg-white max-sm:max-w-[14px] h-[5px] max-sm:min-h-[2px] max-sm:h-[2px] rounded-full flex transition-all duration-300 relative after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-white after:transition-all after:duration-300 after:rounded-full ${
-                open === true ? " after:rotate-90 -rotate-45" : ""
-              }`}
+              className={`w-10 max-lg:w-[39px] max-sm:w-[14px] h-[5px] max-lg:h-[3px] transition-all duration-300 bg-white rounded-lg relative ${
+                open ? "rotate-45" : ""
+              } ${
+                open ? "after:rotate-90" : ""
+              } after:absolute after:top-0 after:left-0 after:w-10 max-lg:after:w-[39px] max-sm:after:w-[14px] after:h-[5px] max-lg:after:h-[3px] after:bg-white after:rounded-lg`}
             ></span>
             <span
-              className={`max-w-[32px] w-full bg-white max-sm:max-w-[14px] h-[5px] max-sm:min-h-[2px] max-sm:h-[2px] rounded-full flex transition-all duration-300 ${
-                open === true ? "-translate-x-10" : ""
+              className={`w-10 max-lg:w-[39px] max-sm:w-[14px] h-[5px] max-lg:h-[3px] transition-all duration-300 bg-white rounded-lg ${
+                open ? "-translate-x-10" : ""
               }`}
             ></span>
           </button>
