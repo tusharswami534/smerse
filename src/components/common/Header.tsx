@@ -45,7 +45,7 @@ const Header = () => {
         <Link href={"#home"} className="text-white font-bold text-[20px]">
           {" "}
           <Image
-            src={"/assets/images/wepp/page logo.webp"}
+            src={"/assets/images/webp/page logo.webp"}
             alt="logo"
             width={68}
             height={68}

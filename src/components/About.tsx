@@ -4,10 +4,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="px-4">
-      <div className="flex container max-w-[1140px] mx-auto pt-11 pb-[78px] justify-between max-lg:flex-col  max-lg:gap-10">
-        <div>
-          <div className="relative">
+    <div className="px-4 max-w-[1920px] relative mx-auto overflow-hidden">
+      <div className="flex container pt-[189px] items-center max-w-[1140px] mx-auto pb-[198px] justify-between max-lg:flex-col  max-lg:gap-10">
+        <div className=" relative z-20">
+          <div className="relative z-20">
             <h2 className="pt-8 max-sm:pt-0 text-5xl font-black text-white tracking-[3px] relative z-10 leading-[120%] max-md:text-[40px] max-md:pt-[108px]">
               About Us
             </h2>
@@ -28,14 +28,13 @@ const About = () => {
             ))}
           </div>
         </div>
-        <div className="relative">
-          <Image
-            src={"/assets/images/wepp/about-image.webp"}
-            alt="hero"
-            height={484}
-            width={484}
-          />
-        </div>
+        <Image
+          src={"/assets/images/webp/about-us-image.webp"}
+          alt="hero"
+          className=" absolute right-0 top-[13%] max-[1370px]:right-[-5%] pointer-events-none max-xl:right-[-10%] max-xl:max-w-[800px] max-xl:top-[17%] max-lg:relative max-md:-translate-x-10 max-sm:-translate-x-28 max-sm:max-w-[600px]"
+          height={690}
+          width={954}
+        />
       </div>
     </div>
   );

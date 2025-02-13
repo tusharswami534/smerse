@@ -5,17 +5,17 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <>
-    <div className='bg-[url("/assets/images/wepp/hero-bg-image.webp")] pt-[100px] bg-cover bg-center bg-no-repeat px-4'>
+    <div className='bg-[url("/assets/images/webp/hero-bg-image.webp")] pt-[100px] bg-cover bg-center bg-no-repeat px-4'>
       <Header />
       <div className="container mx-auto max-w-[1140px] py-[51px] max-sm:py-10 flex justify-center items-center flex-col">
         <Image className="max-sm:max-w-[256px]"
-          src={"/assets/images/wepp/hero-image.webp"}
+          src={"/assets/images/webp/hero-image.webp"}
           alt="hero"
           height={241}
           width={404}
         />
         <div className="relative">
-          <h1 className="pt-8 text-8xl  font-black text-white tracking-[6px] relative z-10 leading-[120%]  max-md:text-[40px] max-md:pt-[108px]">
+          <h1 className="pt-8 text-8xl font-black text-white tracking-[6px] relative z-10 leading-[120%]  max-md:text-[40px] max-md:pt-[108px]">
             SMERSE
           </h1>
           <span className="absolute max-md:hidden inset-0 text-8xl max-md:text-[40px] leading-[115.2px] font-black bg-gradient-to-t to-light-purple via-light-pink from-light-orange bg-clip-text text-transparent tracking-[6px] top-[23.5%] -translate-x-0.5 max-md:top-[70%]">
